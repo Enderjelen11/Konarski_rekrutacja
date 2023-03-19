@@ -98,3 +98,10 @@ p {
 	top: 0;
 	width: 100%
   }
+
+#papaj{
+    content:url(https://i1.sndcdn.com/avatars-KbR3rN2dgMMsbimJ-t46yvg-t500x500.jpg);
+    scroll-snap-align: start none;
+    height: 100vh;
+    width: 100vw;
+}

@@ -21,9 +21,27 @@ const contents = chunks(input,2).map(e=>{
     }
 })
 
+function render(){
+    const D = new Date;
+    
+    function ConditionalRender(){
+        if(D.getHours()==21&&D.getMinutes()==37){
+            let src = "https://jp2w.pl/files/s/119/201398/Edytor/File/mp3/Habemus_Papam.mp3"
+            //@ts-ignore
+            document.getElementById('main').addEventListener('click',()=>{
+                new Audio(src).play();
+            })
+            return <img id="papaj"></img>;
+        }else{
+            return <SectionList data={contents} />;
+        }
+    }
 
-ReactDOM.createRoot(document.getElementById('main') as HTMLElement).render(
-  <React.StrictMode>
-        <SectionList data={contents} />
-  </React.StrictMode>,
-)
+    ReactDOM.createRoot(document.getElementById('main') as HTMLElement).render(
+        <React.StrictMode>
+            <ConditionalRender />
+        </React.StrictMode>,
+    )
+}
+
+render();
