@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { SectionList } from './SectionList'
 import input from './input.json'
+import './style.css'
 
 function chunks(array:any[],chunkSize:number){
     const result = []

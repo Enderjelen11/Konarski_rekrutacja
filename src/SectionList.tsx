@@ -18,7 +18,7 @@ export const SectionList = (props : {data:dataEl[]}) => {
         }
     }
     return (
-       <React.Fragment> 
+       <> 
             {props.data.map((element:dataEl)=>{
                 return(
                     <Section header={element.title}>
@@ -27,6 +27,6 @@ export const SectionList = (props : {data:dataEl[]}) => {
                     );
                 })
             }
-        </React.Fragment>
+        </>
     )
 }
