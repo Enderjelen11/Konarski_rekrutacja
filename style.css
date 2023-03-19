@@ -1,5 +1,5 @@
 body {
-    background-image: url("konar.jpeg");
+    background-image: url("./konar.jpeg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -108,7 +108,7 @@ ul{
         animation-timing-function: linear;
         align-self: flex-end;
         animation-duration: 2s;
-        animation-iteration-count: infinite;:width;
+        animation-iteration-count: infinite;
     }
     @keyframes bounce-1 {
         0%   { transform: translateY(0); }
