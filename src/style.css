@@ -1,4 +1,8 @@
 body {
+    background-image: url("konar.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
 	background-color: #111111;
   	margin: 0;
   	overflow-x: hidden;
@@ -12,7 +16,7 @@ body {
     position: relative;
 }
 
-.header {
+#header {
 	text-align: center;
 	background-color: #1d1d1d; 
 	color: #fff;
@@ -25,6 +29,8 @@ body {
     scroll-snap-align: start none;
     height: 100vh;
     width: 100vw;
+    background-color: rgba(27, 26, 26, .85);
+    backdrop-filter: sepia(90%);
 }
 .sticky + section {
 	padding-top: 102px;
@@ -49,23 +55,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-	justify-content: center;
-	align-items: center;
-	background-color: #383838;
-	border-radius: 5px;
-	box-shadow: 0px 0px 10px #999;
-	margin-bottom: 20px;
+	border-radius: 10px;
 	padding: 20px;
-	transition: all 0.2s ease-in-out;
 	color: white;
-	border-radius: 5px;
-	box-shadow: 0px 2px 5px #666;
     width: 80vw;
     height: 60vh;
-}
-
-section:hover {
-	transform: scale(1.05);
+    background-color: rgba(27, 26, 26, .85);
+    backdrop-filter: sepia(90%);
 }
 
 h2 {
