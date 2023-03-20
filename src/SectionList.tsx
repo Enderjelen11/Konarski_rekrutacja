@@ -7,9 +7,10 @@ export const SectionList = (props : {data:dataEl[]}) => {
     function ListIfArray(props:{input:string|string[]}){
         if(Array.isArray(props.input)){
             //@ts-ignore
-            const list = props.input.map((element:string[])=>{
+            const list = props.input.map((element:string[],i:number)=>{
+                const key = `li${i}`;
                 return(
-                    <li>{element}</li>
+                    <li key={key}>{element}</li>
                 )
             })
             return <ul>{list}</ul>
@@ -19,9 +20,10 @@ export const SectionList = (props : {data:dataEl[]}) => {
     }
     return (
        <> 
-            {props.data.map((element:dataEl)=>{
+            {props.data.map((element:dataEl, i:number)=>{
+                const key = `sec${i}`;
                 return(
-                    <Section header={element.title}>
+                    <Section header={element.title} key={key}>
                         <ListIfArray input={element.text} />
                     </Section>
                     );
