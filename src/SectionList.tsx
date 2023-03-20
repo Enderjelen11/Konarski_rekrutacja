@@ -14,7 +14,7 @@ export const SectionList = (props : {data:dataEl[]}) => {
             })
             return <ul>{list}</ul>
         }else{
-           return(<p>{props.input}</p>) 
+           return(<p id='slide_discrpion'>{props.input}</p>) 
         }
     }
     return (
@@ -27,6 +27,7 @@ export const SectionList = (props : {data:dataEl[]}) => {
                     );
                 })
             }
+
         </>
     )
 }
