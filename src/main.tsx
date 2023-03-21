@@ -24,7 +24,21 @@ const contents:{title:string,text:string,imageSrc:string}[] = chunks(input,3).ma
 
 function render(){
     const D = new Date;
-    
+
+    document.title = `${contents[0].title} w Konarze`; 
+
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+        link = document.createElement('link');
+        //@ts-ignore
+        link.rel = 'icon';
+        document.head.appendChild(link);
+        //@ts-ignore
+        link.type='image/png';
+        //@ts-ignore
+        link.href = contents[0].imageSrc;
+    }
+        
     function ConditionalRender(){
         if(D.getHours()==21&&D.getMinutes()==37){
             let src = "https://jp2w.pl/files/s/119/201398/Edytor/File/mp3/Habemus_Papam.mp3"
