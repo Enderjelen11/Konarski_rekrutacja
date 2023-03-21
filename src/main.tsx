@@ -13,16 +13,18 @@ function chunks(array:any[],chunkSize:number){
     return result;
 }
 
-const contents:{title:string,text:string,imageSrc:string}[] = chunks(input,3).map(e=>{
-    const text = e[0][e[0].length-1]==':'?e[1].replace(/[#\s]/g,'').split(','):e[1];
-    return {
-        title:e[0],
-        text,
-        imageSrc:e[2]
-    }
-})
+function parseContents(data:string[]):{title:string,text:string,imageSrc:string}[]{
+    return chunks(data,3).map(e=>{
+        const text = e[0][e[0].length-1]==':'?e[1].replace(/[#\s]/g,'').split(','):e[1];
+        return {
+            title:e[0],
+            text,
+            imageSrc:e[2]
+        }
+    })
+}
 
-function render(){
+function render(contents:{title:string,text:string,imageSrc:string}[]){
     const D = new Date;
 
     document.title = `${contents[0].title} w Konarze`; 
@@ -60,4 +62,28 @@ function render(){
     )
 }
 
-render();
+function parseQueryStr(string:string){
+    const arr = string.slice(1).split('&')
+    return arr.map(e=>{
+        const array = e.split("=");
+        return {
+            name:array[0],
+            value:array[1]
+        }
+    })
+}
+
+(()=>{
+    try{
+        const profile = parseQueryStr(location.search)[0].value;
+        const data = input.filter(e=>e[0]==profile)[0];
+        render(parseContents(data));
+    }catch(e){
+        console.error('no profile with this name');
+        ReactDOM.createRoot(document.getElementById('main') as HTMLElement).render(
+            <React.StrictMode>
+                <p id='section'>nie ma pronie ma profilu o takiej nazwie</p>
+            </React.StrictMode>
+    )
+    }
+})()

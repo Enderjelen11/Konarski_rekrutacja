@@ -1,17 +1,19 @@
 [
-    "Mat-Fiz-Ang",
-    "W KONARZE",
-    "https://konarski.edu.pl/rek/res/logos/matematyka.png",
+    [
+        "Mat-Fiz-Ang",
+        "W KONARZE",
+        "https://konarski.edu.pl/rek/res/logos/matematyka.png",
 
-    "Czego nauczysz się na profilu matematyczno-fizycznym?",
-    "Profil matematyczno-fizyczny w liceum to kierunek, na którym uczniowie zdobywają zaawansowaną wiedzę z matematyki i fizyki.",
-    "https://images.pexels.com/photos/267586/pexels-photo-267586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "Czego nauczysz się na profilu matematyczno-fizycznym?",
+        "Profil matematyczno-fizyczny w liceum to kierunek, na którym uczniowie zdobywają zaawansowaną wiedzę z matematyki i fizyki.",
+        "https://images.pexels.com/photos/267586/pexels-photo-267586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 
-    "Możliwe kierunki studiów:",
-    "Matematyka, Fizyka, Informatyka, Astronomia, Inżynieria",
-    "https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "Możliwe kierunki studiów:",
+        "Matematyka, Fizyka, Informatyka, Astronomia, Inżynieria",
+        "https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 
-    "Przedmioty punktowane:",
-    "Polski, Matematyka, Fizyka, Angielski",
-    "https://images.pexels.com/photos/6238039/pexels-photo-6238039.jpeg?auto=compress&cs=tinysrgb&w=800"
+        "Przedmioty punktowane:",
+        "Polski, Matematyka, Fizyka, Angielski",
+        "https://images.pexels.com/photos/6238039/pexels-photo-6238039.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ]
 ]
