@@ -64,9 +64,6 @@ body {
   to {font-size: 3vw;}
 }
 
-.sticky + section {
-	padding-top: 102px;
-  }
 .main {
 	display: flex;
   grid-template-columns: repeat(2, 1fr);
@@ -97,8 +94,8 @@ body {
 }
 
 h2 {
-    font-size: 5vw;
 	margin-top: 0px;
+    font-size: 5vw;
 }
 
 
@@ -153,3 +150,13 @@ ul{
     color:white;
     position: relative;
 }
+
+@media only screen and (max-device-width: 480px){
+    h2{
+        font-size: 9vw;
+    }
+    #slide_discrpion{
+        font-size: 5vw;
+    }
+}
+
