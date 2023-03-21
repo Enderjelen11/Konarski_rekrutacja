@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Donegal+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Tiro+Telugu&display=swap');
+
 body {
     background-image: url("./konar.jpeg");
     background-position: center center;
@@ -7,7 +10,6 @@ body {
     background-color: #111111;
   	margin: 0;
   	overflow-x: hidden;
-	font-family: 'Courier New';
 }
 
 .full_page_slide{
@@ -35,9 +37,10 @@ body {
 }
 
 #header h1{
+    font-family: 'Donegal One', sans-serif;
     position: relative;
-top: 20%;
-transform: translateY(-20%);
+    top: 20%;
+    transform: translateY(-20%);
     font-size: 10vw;
 }
 .sticky + section {
@@ -51,14 +54,15 @@ transform: translateY(-20%);
 
 .slides{
     position: absolute;
-  inset: 0 0 0 0;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-padding: 30px 0 0 0;
+    inset: 0 0 0 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-padding: 30px 0 0 0;
 }
 
 #section {
+    font-family: 'Tiro Telugu', sans-serif;
     position: absolute;
     top: 50%;
     left: 50%;
