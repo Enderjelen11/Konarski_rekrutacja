@@ -1,7 +1,7 @@
 import React from 'react'
 import Section from './section'
 
-type dataEl = {title:string,text:string|string[]};
+type dataEl = {title:string,text:string|string[],imageSrc:string};
 
 export const SectionList = (props : {data:dataEl[]}) => {
     function ListIfArray(props:{input:string|string[]}){
@@ -23,7 +23,7 @@ export const SectionList = (props : {data:dataEl[]}) => {
             {props.data.map((element:dataEl, i:number)=>{
                 const key = `sec${i}`;
                 return(
-                    <Section header={element.title} key={key}>
+                    <Section header={element.title} image={element.imageSrc} key={key}>
                         <ListIfArray input={element.text} />
                     </Section>
                     );

@@ -13,11 +13,12 @@ function chunks(array:any[],chunkSize:number){
     return result;
 }
 
-const contents:{title:string,text:string}[] = chunks(input,2).map(e=>{
+const contents:{title:string,text:string,imageSrc:string}[] = chunks(input,3).map(e=>{
     const text = e[0][e[0].length-1]==':'?e[1].replace(/[#\s]/g,'').split(','):e[1];
     return {
         title:e[0],
-        text
+        text,
+        imageSrc:e[2]
     }
 })
 
@@ -39,7 +40,7 @@ function render(){
 
     ReactDOM.createRoot(document.getElementById('main') as HTMLElement).render(
         <React.StrictMode>
-            <Header discription={contents[0].text}>{contents[0].title}</Header>
+            <Header discription={contents[0].text} image={contents[0].imageSrc}>{contents[0].title}</Header>
             <ConditionalRender />
         </React.StrictMode>,
     )
