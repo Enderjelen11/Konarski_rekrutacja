@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Donegal+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Tiro+Telugu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 body {
     background-image: url("./konar.jpeg");
@@ -10,6 +9,7 @@ body {
     background-color: #111111;
   	margin: 0;
   	overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
 }
 
 .full_page_slide{
@@ -20,6 +20,7 @@ body {
 }
 
 #header {
+    font-weight: bold;
 	text-align: center;
 	background-color: #1d1d1d; 
 	color: #fff;
@@ -37,7 +38,6 @@ body {
 }
 
 #header h1{
-    font-family: 'Donegal One', sans-serif;
     position: relative;
     top: 20%;
     transform: translateY(-20%);
@@ -83,7 +83,6 @@ body {
 }
 
 #section {
-    font-family: 'Tiro Telugu', sans-serif;
     position: absolute;
     top: 50%;
     left: 50%;
