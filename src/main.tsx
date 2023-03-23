@@ -64,18 +64,13 @@ function render(contents:{title:string,text:string,imageSrc:string}[]){
 
 function parseQueryStr(string:string){
     const arr = string.slice(1).split('&')
-    return arr.map(e=>{
-        const array = e.split("=");
-        return {
-            name:array[0],
-            value:array[1]
-        }
-    })
+    return arr
 }
 
 (()=>{
     try{
-        const profile = parseQueryStr(location.search)[0].value;
+        const profile = parseQueryStr(location.search)[0];
+        console.log(profile);
         const data = input.filter(e=>e[0]==profile)[0];
         render(parseContents(data));
     }catch(e){
