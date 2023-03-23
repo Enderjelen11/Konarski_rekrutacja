@@ -15,7 +15,7 @@ function chunks(array:any[],chunkSize:number){
 
 function parseContents(data:string[]):{title:string,text:string,imageSrc:string}[]{
     return chunks(data,3).map(e=>{
-        const text = e[0][e[0].length-1]==':'?e[1].replace(/[#\s]/g,'').split(','):e[1];
+        const text = e[0][e[0].length-1]==':'?e[1].split(';'):e[1];
         return {
             title:e[0],
             text,
