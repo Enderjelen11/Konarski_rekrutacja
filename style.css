@@ -124,6 +124,7 @@ body {
     background-color: rgba(27, 26, 26, .85);
     backdrop-filter: sepia(90%);
     text-align: center;
+    min-height: 50vh;
 }
 
 #section h2 {
