@@ -9,8 +9,9 @@ export default function Section(props : {header:string,image:string,children:JSX
                     <h2>{props.header}</h2>
                     {props.children}
                 </div>
-                <div className="slide_image">
-                <img src={props.image} />
+                <div className='img_container'>
+                    <div className="slide_image" style={{backgroundImage:`url(${props.image})`}}>
+                    </div>
                 </div>
             </div>
         </div>
