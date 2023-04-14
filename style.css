@@ -216,6 +216,34 @@ ul{
     position: relative;
 }
 
+.go_back{
+    position: absolute;
+    color: white;
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    animation-name: fly_in;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+}
+
+.go_back img{
+   height: 1em;
+   vertical-align: middle; 
+}
+
+.go_back span{
+  vertical-align: middle;
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+@keyframes fly_in {
+    0%   { transform: translateY(-20vh); }
+    100% { transform: translateY(0); }
+}
+
 @media only screen and (max-device-width: 480px){
     #section{
 	    border-radius: 40px;
@@ -254,5 +282,7 @@ ul{
     #slide_discrpion{
         transform: translateY(-5%);
     }
+    .go_back{
+        font-size: 6vw;   
+    }
 }
-
