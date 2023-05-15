@@ -239,6 +239,11 @@ ul{
   margin-left: 10px;
 }
 
+#go_back_bottom{
+  animation-name: none;
+  transform: translate(-40vw,40vh);
+}
+
 @keyframes fly_in {
     0%   { transform: translateY(-20vh); }
     100% { transform: translateY(0); }
@@ -284,5 +289,12 @@ ul{
     }
     .go_back{
         font-size: 6vw;   
+    }
+    #go_back_bottom{
+       transform:translate(5vw,40vh); 
+       font-size:10vw;
+    }
+    ul{
+        font-size: 350%;
     }
 }

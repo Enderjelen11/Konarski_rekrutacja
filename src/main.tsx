@@ -13,18 +13,8 @@ function chunks(array:any[],chunkSize:number){
     return result;
 }
 
-function parseContents(data:string[]):{title:string,text:string,imageSrc:string}[]{
-    return chunks(data,3).map(e=>{
-        const text = e[0][e[0].length-1]==':'?e[1].split(';'):e[1];
-        return {
-            title:e[0],
-            text,
-            imageSrc:e[2]
-        }
-    })
-}
 
-function render(contents:{title:string,text:string,imageSrc:string}[]){
+function render(contents:{title:string,text:string|string[],image:string}[]){
     const D = new Date;
 
     document.title = `${contents[0].title} w Konarze`; 
@@ -38,7 +28,7 @@ function render(contents:{title:string,text:string,imageSrc:string}[]){
         //@ts-ignore
         link.type='image/png';
         //@ts-ignore
-        link.href = contents[0].imageSrc;
+        link.href = contents[0].image;
     }
         
     function ConditionalRender(){
@@ -56,7 +46,10 @@ function render(contents:{title:string,text:string,imageSrc:string}[]){
 
     ReactDOM.createRoot(document.getElementById('main') as HTMLElement).render(
         <React.StrictMode>
-            <Header discription={contents[0].text} image={contents[0].imageSrc}>{contents[0].title}</Header>
+            {/*the following error is not possible to happen*/}
+            {/*
+            //@ts-ignore */}
+            <Header discription={contents[0].text} image={contents[0].image}>{contents[0].title}</Header>
             <ConditionalRender />
         </React.StrictMode>,
     )
@@ -71,8 +64,15 @@ function parseQueryStr(string:string){
     try{
         const profile = parseQueryStr(location.search)[0];
         console.log(profile);
-        const data = input.filter(e=>e[0]==profile)[0];
-        render(parseContents(data));
+        const data = input.filter(e=>e[0].title==profile)[0].map(e=>{
+            const text = e.title[e.title.length-1]==':'?e.text.split(';'):e.text;
+            return {
+                title:e.title,
+                text,
+                image:e.image
+            }
+        });
+        render(data);
     }catch(e){
         console.error('no profile with this name');
         ReactDOM.createRoot(document.getElementById('main') as HTMLElement).render(

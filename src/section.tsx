@@ -1,7 +1,7 @@
 import React from 'react'
 import { JsxElement } from 'typescript'
 
-export default function Section(props : {header:string,image:string,children:JSX.Element|JSX.Element[]}){
+export default function Section(props : {header:string,image:string,children:JSX.Element|JSX.Element[],last:boolean}){
     return (
         <div className="full_page_slide">
             <div id='section'>
@@ -14,6 +14,15 @@ export default function Section(props : {header:string,image:string,children:JSX
                     </div>
                 </div>
             </div>
+            {props.last
+              ?(
+                  <div className='go_back' id='go_back_bottom' onClick={()=>{window.history.back()}}>
+                    <img id="arrow" src="arrow.svg" style={{transform:"rotate(-180deg)"}}/>
+                    <span>Powrót</span>
+                  </div>
+                )
+              : <span></span>
+            }
         </div>
     )
  }
